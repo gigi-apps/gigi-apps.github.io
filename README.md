@@ -1,6 +1,6 @@
 # Gigi Apps
 
-The website for Gigi Apps: free apps for Windows. Live at **https://gigi-apps.github.io**.
+The website for Gigi Apps: free apps . Live at **https://gigi-apps.github.io**.
 
 ## Apps
 
