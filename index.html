@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gigi Apps</title>
+  <meta name="description" content="Free apps for Windows by Gigi Apps. Download Widglass: macOS-style glass widgets for your desktop.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Soft color blobs behind the glass, like the Widglass menu -->
+  <div class="backdrop" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div>
+
+  <header class="topbar glass">
+    <a class="brand" href="#">
+      <span class="brand-mark" aria-hidden="true">G</span>
+      <span>Gigi Apps</span>
+    </a>
+    <nav>
+      <a href="#apps">Apps</a>
+      <a href="https://github.com/gigilucas" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" type="button" aria-label="Switch light or dark mode" title="Light / dark">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Apps for Windows,<br><span class="gradient-text">made with care.</span></h1>
+      <p>Free, simple and good-looking. Download, open, done: nothing else to install.</p>
+    </section>
+
+    <!--
+      Apps. To add a new one, copy an <article class="app"> block and change the texts, images and links.
+    -->
+    <section id="apps" class="apps">
+
+      <article class="app glass" id="widglass">
+        <div class="app-head">
+          <img class="app-icon" src="assets/widglass/logo.png" alt="Widglass icon" width="96" height="96">
+          <div>
+            <h2>Widglass</h2>
+            <p class="tagline">macOS-style glass widgets for your Windows desktop.</p>
+            <ul class="chips">
+              <li>Windows 10 &amp; 11</li>
+              <li>Free</li>
+              <li>Nothing else to install</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/gigilucas/Widglass/releases/latest/download/Widglass.exe">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-glass" href="https://github.com/gigilucas/Widglass" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+        <p class="note">First time? If Windows says <em>"Windows protected your PC"</em>, click <strong>More info</strong> → <strong>Run anyway</strong>.</p>
+
+        <div class="shots" data-shots>
+          <img src="assets/widglass/widget-clock.png" data-dark="assets/widglass/widget-clock-dark.png" alt="Clock widget" loading="lazy">
+          <img src="assets/widglass/widget-cpu-ram.png" data-dark="assets/widglass/widget-cpu-ram-dark.png" alt="CPU and RAM widget" loading="lazy">
+          <img src="assets/widglass/widget-calendar.png" data-dark="assets/widglass/widget-calendar-dark.png" alt="Calendar widget" loading="lazy">
+          <img src="assets/widglass/widget-weather.png" data-dark="assets/widglass/widget-weather-dark.png" alt="Weather widget" loading="lazy">
+          <img src="assets/widglass/widget-music.png" data-dark="assets/widglass/widget-music-dark.png" alt="Music widget" loading="lazy">
+        </div>
+
+        <div class="details">
+          <img class="menu-shot" src="assets/widglass/manager.png" data-dark="assets/widglass/manager-dark.png" alt="Widglass menu" loading="lazy">
+          <ul class="features">
+            <li><b>Five widgets</b> Clock, CPU / RAM, Calendar, Weather and Music.</li>
+            <li><b>Stuck to the desktop</b> Behind your windows, still there on Win+D.</li>
+            <li><b>Drag anywhere</b> Across screens, never cut off, never on top of each other.</li>
+            <li><b>Music</b> Apple Music, YouTube Music and Spotify, with playback controls.</li>
+            <li><b>Light &amp; dark</b> Frosted or smoked glass, in the colors of the logo.</li>
+            <li><b>Always ready</b> Starts with Windows and lives next to the clock.</li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Gigi Apps · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script>
+    // Light / dark: follows Windows by default; the button remembers your choice on this device.
+    (function () {
+      var root = document.documentElement;
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var forced = new URLSearchParams(location.search).get('theme'); // e.g. ?theme=dark
+      if (forced === 'light' || forced === 'dark') saved = forced;
+      if (saved) root.setAttribute('data-theme', saved);
+
+      function isDark() {
+        var t = root.getAttribute('data-theme');
+        return t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+      function syncShots() {
+        document.querySelectorAll('img[data-dark]').forEach(function (img) {
+          if (!img.dataset.light) img.dataset.light = img.getAttribute('src');
+          img.src = isDark() ? img.dataset.dark : img.dataset.light;
+        });
+      }
+      document.querySelector('.theme-toggle').addEventListener('click', function () {
+        var next = isDark() ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        syncShots();
+      });
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncShots);
+      syncShots();
+    })();
+  </script>
+</body>
+</html>
