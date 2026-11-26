@@ -47,6 +47,7 @@
               <li>Windows 10 &amp; 11</li>
               <li>Free</li>
               <li>Nothing else to install</li>
+              <li>Updates itself</li>
             </ul>
           </div>
         </div>
@@ -61,7 +62,7 @@
             View on GitHub
           </a>
         </div>
-        <p class="note">First time? If Windows says <em>"Windows protected your PC"</em>, click <strong>More info</strong> → <strong>Run anyway</strong>.</p>
+        <p class="note"><span data-latest="gigilucas/Widglass"></span>First time? If Windows says <em>"Windows protected your PC"</em>, click <strong>More info</strong> → <strong>Run anyway</strong>. After that, Widglass updates itself.</p>
 
         <div class="shots" data-shots>
           <img src="assets/widglass/widget-clock.png" data-dark="assets/widglass/widget-clock-dark.png" alt="Clock widget" loading="lazy">
@@ -79,7 +80,7 @@
             <li><b>Drag anywhere</b> Across screens, never cut off, never on top of each other.</li>
             <li><b>Music</b> Apple Music, YouTube Music and Spotify, with playback controls.</li>
             <li><b>Light &amp; dark</b> Frosted or smoked glass, in the colors of the logo.</li>
-            <li><b>Always ready</b> Starts with Windows and lives next to the clock.</li>
+            <li><b>Always up to date</b> Starts with Windows, lives next to the clock and updates itself with one click.</li>
           </ul>
         </div>
       </article>
@@ -120,6 +121,17 @@
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncShots);
       syncShots();
     })();
+
+    // "Version x.y.z · " next to each app, read from its latest GitHub release (nothing shown if it fails).
+    document.querySelectorAll('[data-latest]').forEach(function (el) {
+      fetch('https://api.github.com/repos/' + el.dataset.latest + '/releases/latest')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (release) {
+          if (release && release.tag_name)
+            el.innerHTML = '<strong>Version ' + release.tag_name.replace(/^v/i, '') + '</strong> · ';
+        })
+        .catch(function () {});
+    });
   </script>
 </body>
 </html>
