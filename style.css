@@ -132,6 +132,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 
 .shots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 26px -8px 0; }
 .shots img { width: 100%; height: auto; display: block; }
+.shots { grid-auto-flow: row dense; }
+.shots img.wide { grid-column: span 2; align-self: center; }
 
 .details { display: grid; grid-template-columns: 260px 1fr; gap: 28px; align-items: center; margin-top: 18px; }
 .menu-shot { width: 100%; height: auto; display: block; }
